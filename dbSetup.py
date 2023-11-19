@@ -4,7 +4,6 @@ import psycopg2
 from psycopg2 import sql
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
-# Database connection parameters
 params = {
     'dbname': 'postgres',
     'user': 'your_username',
