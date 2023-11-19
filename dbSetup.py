@@ -3,12 +3,19 @@
 import psycopg2
 from psycopg2 import sql
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+import config
+
+# conn = psycopg2.connect(
+#     host=config.pg_host,
+#     database=config.pg_database,
+#     user=config.pg_user,
+#     password=config.pg_password)
 
 params = {
     'dbname': 'postgres',
-    'user': 'your_username',
-    'password': 'your_password',
-    'host': 'localhost'
+    'user': config.pg_user,
+    'password': config.pg_password,
+    'host': config.pg_host
 }
 
 conn = psycopg2.connect(**params)
